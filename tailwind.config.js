@@ -6,11 +6,30 @@ module.exports = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    backgroundImage: {
+      'imgBgHero': 'url("./src/app/assets/bg-hero.jpg")',
+      'imgBgDetails': 'url("./src/app/assets/bg-details.jpg")',
+    },
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      colors:{
+        'red900': '#FF0000',
+        'red800': '#FF040D',
+        'gray900': '#33303E',
+        'gray800': '#4E4B59',
+        'gray700': '#5F5C6B',
+        'gray600': '#7A7786',
+        'gray500': '#8C8A97',
+        'gray400': '#ACABB7',
+        'gray300': '#C6C5CE',
+        'gray200': '#E1E0E7',
+        'white': '#FFFFFF',
+        'black': '#000000',
+      },
+      container: {
+        'width': '100%',
+        'maxWidth': '124.6rem',
+        'margin': '0 auto',
+        'padding': '0rem 1.5rem',
       },
     },
   },
