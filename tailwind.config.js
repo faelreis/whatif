@@ -6,10 +6,6 @@ module.exports = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    backgroundImage: {
-      'imgBgHero': 'url("./src/app/assets/bg-hero.jpg")',
-      'imgBgDetails': 'url("./src/app/assets/bg-details.jpg")',
-    },
     extend: {
       colors:{
         'red900': '#FF0000',
@@ -24,6 +20,7 @@ module.exports = {
         'gray200': '#E1E0E7',
         'white': '#FFFFFF',
         'black': '#000000',
+        'yellow': '#FFA800',
       },
       container: {
         'width': '100%',
