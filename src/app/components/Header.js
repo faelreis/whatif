@@ -9,9 +9,9 @@ export function Header(){
     return(
         <header className='h-[80] border-b-[1px] border-white border-opacity-20'>
             <Container>
-                <div className='h-full w-full flex justify-between my-[30px]'>
-                   <Image src={logoMarvel} alt='Logo Marvel'/>
-                   <Image src={logoRafael} alt='Logo Rafael Reis Franco'/>
+                <div className='h-full w-full flex justify-between py-[30px] border-x-[1px] border-white border-opacity-20 '>
+                   <Image src={logoMarvel} alt='Logo Marvel' className='ml-10'/>
+                   <Image src={logoRafael} alt='Logo Rafael Reis Franco' className='mr-10'/>
                 </div>
             </Container>
         </header>

@@ -28,6 +28,9 @@ module.exports = {
         'margin': '0 auto',
         'padding': '0rem 1.5rem',
       },
+      backgroundImage: {
+        'hero_img': "url('../app/assets/image-hero.jpg')"
+      }
     },
   },
   plugins: [],
