@@ -5,7 +5,7 @@ import imgCharacter from '../assets/character.jpg'
 
 export function AboutCharacter(){
     return(
-        <div className='bg-details_img bg-cover bg-center pt-[105px] min-[0px]:pt-[105px] min-[0px]:pb-10 min-[348px]:h-[960px] min-[351px]:h-[940px] min-[370px]:h-[947px] min-[390px]:h-[977px] min-[410px]:h-[997px]  min-[445px]:h-[1010px] min-[460px]:h-[1096px] min-[460px]:h-[1040px] min-[486px]:h-[1020px] min-[505px]:h-[1040px] min-[525px]:h-[1070px] min-[528px]:h-[1070px] min-[542px]:h-[1030px] min-[562px]:h-[1006px] lg:h-[740px]'>
+        <div className='bg-details_img bg-cover bg-center pt-[105px] min-[0px]:pt-[105px] min-[0px]:pb-10 min-[348px]:h-[960px] min-[351px]:h-[940px] min-[370px]:h-[947px] min-[390px]:h-[977px] min-[410px]:h-[997px]  min-[445px]:h-[1010px] min-[460px]:h-[1096px] min-[460px]:h-[1040px] min-[486px]:h-[1020px] min-[505px]:h-[1040px] min-[525px]:h-[1070px] min-[528px]:h-[1070px] min-[542px]:h-[1030px] min-[562px]:h-[1006px] lg:h-[738px]'>
             <Container>
                 <div className='w-full flex items-center justify-between flex-col max-[348px]:border-none lg:flex-row'>
                     <div>
