@@ -1,5 +1,7 @@
 import { CardCharacter } from "./CardCharacter";
 import { Container } from "./Container";
+import logoCardMarvel from '../assets/logo-marvel.png'
+import Image from 'next/image'
 
 export function SectionCharacters(){
     return(
@@ -20,6 +22,12 @@ export function SectionCharacters(){
                         <CardCharacter/>
                         <CardCharacter/>
                         <CardCharacter/>
+                        <div className='flex items-center justify-center'>
+                            <Image
+                                src={logoCardMarvel}
+                                alt='Logo Marvel'
+                            />
+                        </div>
                     </div>
                 </div>
             </Container>

@@ -1,4 +1,5 @@
 import { AboutCharacter } from "../components/AboutCharacter";
+import { Footer } from "../components/Footer";
 import { Header } from "../components/Header";
 import { PageTitle } from "../components/PageTitle";
 import { SectionCharacters } from "../components/SectionCharacters";
@@ -18,6 +19,7 @@ export default function Character(){
             <Header/>
             <AboutCharacter/>
             <SectionCharacters/>
+            <Footer/>
         </>
 
     )
