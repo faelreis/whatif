@@ -29,7 +29,8 @@ module.exports = {
         'padding': '0rem 1.5rem',
       },
       backgroundImage: {
-        'hero_img': "url('../app/assets/image-hero.jpg')"
+        'hero_img': "url('../app/assets/image-hero.jpg')",
+        'details_img': "url('../app/assets/image-details.jpg')"
       }
     },
   },
