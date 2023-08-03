@@ -1,33 +1,25 @@
-'use client'
-
-
-import { useEffect } from 'react';
 import { Footer } from './components/Footer';
 import { Header } from './components/Header';
 import { SectionCharacters } from './components/SectionCharacters';
 import { SectionHero } from './components/SectionHero';
+import { createClient } from "../prismicio";
 
-export default function Home({ data }) {
+export default async function Home() {  
 
-  console.log(data)
-  
+  const prismic = createClient();
+  const document = await prismic.getSingle('home')
+  const dataPage = document.data;
+
+  const characters = await prismic.getAllByType('character')
+  console.log(characters)
+
   return (
     <>
       <Header/>
-      <SectionHero/>
-      <SectionCharacters/>
+      <SectionHero data={dataPage}/>
+      <SectionCharacters data={characters}/>
       <Footer/>
     </>
 
   )
 }
-
-
-export const getStaticProps = () => {
-  const prismic = getPrismicClient
-  return {
-    props: {
-      data: myName,
-    },
-  };
-};

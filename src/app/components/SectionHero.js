@@ -6,7 +6,8 @@ import { Container } from "./Container";
 import {TrailerVideo} from "./TrailerVideo";
 
 
-export function SectionHero(){
+export function SectionHero({data}){
+
     return(
         <section className='h-[731px] bg-hero_img bg-cover bg-center pt-[96px] max-lg:h-[773px] max-md:h-[765px] max-sm:h-[721px] max-[403px]:h-[718px] max-[348px]:h-[738px] max-[300px]:h-[758px] max-[293px]:h-[800px] max-[233px]:h-[900px]'>
             <Container>

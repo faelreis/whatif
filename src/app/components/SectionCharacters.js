@@ -3,7 +3,7 @@ import { Container } from "./Container";
 import logoCardMarvel from '../assets/logo-marvel.png'
 import Image from 'next/image'
 
-export function SectionCharacters(){
+export function SectionCharacters({ data }){
     return(
         <div className='py-20'>
             <Container>
@@ -15,13 +15,18 @@ export function SectionCharacters(){
                         </div>
                     </div>
                     <div className='grid gap-x-6 gap-y-12 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-6 xl:grid-cols-4 xl:gap-6 xl:gap-y-16'>
-                        <CardCharacter/>
-                        <CardCharacter/>
-                        <CardCharacter/>
-                        <CardCharacter/>
-                        <CardCharacter/>
-                        <CardCharacter/>
-                        <CardCharacter/>
+                        {
+                            data.map(character =>{
+                                return(
+                                    <CardCharacter
+                                        key={character.id}
+                                        imageCharacter={character.data.image_character.url}
+                                        slug={character.data.slug}
+                                        name={character.data.name_character}
+                                    />
+                                )
+                            })    
+                        }
                         <div className='flex items-center justify-center'>
                             <Image
                                 src={logoCardMarvel}
