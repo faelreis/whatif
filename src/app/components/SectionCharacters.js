@@ -16,7 +16,7 @@ export function SectionCharacters({ data }){
                     </div>
                     <div className='grid gap-x-6 gap-y-12 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-6 xl:grid-cols-4 xl:gap-6 xl:gap-y-16'>
                         {
-                            data.map(character =>{
+                            data?.map(character =>{
                                 return(
                                     <CardCharacter
                                         key={character.id}

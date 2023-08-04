@@ -11,7 +11,6 @@ export default async function Home() {
   const dataPage = document.data;
 
   const characters = await prismic.getAllByType('character')
-  console.log(characters)
 
   return (
     <>
