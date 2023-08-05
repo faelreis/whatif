@@ -22,7 +22,7 @@ const routes = [
   },
   {
     type: "character",
-    path: "/:uid",
+    path: "/:slug",
   },
 ];
 

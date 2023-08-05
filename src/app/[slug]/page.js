@@ -5,53 +5,30 @@ import { PageTitle } from "../components/PageTitle";
 import { SectionCharacters } from "../components/SectionCharacters";
 import { createClient } from "../../prismicio";
 
-export const metadata = {
-    title: 'Detalhes: | Marvel',
-    description: 'Detalhes do personagem: ',
-}
+export default async function Character({ params }){
 
-export default async function Character({params}){
-    
+    const client = createClient();
+    const characters = await client.getAllByType('character')
+    const character = characters.data;
 
-    console.log(params.slug)
-    const prismic = createClient();
-    const document = await prismic.getSingle('home')
-    const dataPage = document.data;
-  
-    const characters = await prismic.getAllByType('character')
+    // characters.splice(characters.findIndex((e) => {
+    //     return params.slug === character.slug
+    // }), 1)
+
+    console.log(characters)
 
     return(
         <>
+            <h2>{characters}</h2>
             <PageTitle
                 title='Detalhes  | Marvel'
                 description=''
             />
             <Header/>
             <AboutCharacter data={characters}/>
-            <SectionCharacters/>
+            <SectionCharacters data={characters}/>
             <Footer/>
         </>
 
     )
 }
-
-// export const getStaticPaths = async () => {
-//     const prismic = getPrismicClient();
-//     const characters = await prismic.getAllByType('character');
-  
-//     const paths = characters.map(({ data }) => ({
-//       params: { slug: data.slug },
-//     }));
-  
-//     return {
-//       paths,
-//       fallback: true,
-//     };
-//   };
-  
- export const getServerSideProps = async (ctx)=>{
-    console.log(ctx)
-     return{
-      props: {},
-    }
- }
