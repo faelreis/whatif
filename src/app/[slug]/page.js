@@ -11,21 +11,20 @@ export default async function Character({ params }){
     const characters = await client.getAllByType('character')
     const character = characters.data;
 
-    // characters.splice(characters.findIndex((e) => {
-    //     return params.slug === character.slug
-    // }), 1)
+     characters.splice(characters.findIndex((e) => {
+         return params.slug === character.slug
+     }), 1)
 
     console.log(characters)
 
     return(
         <>
-            <h2>{characters}</h2>
             <PageTitle
                 title='Detalhes  | Marvel'
                 description=''
             />
             <Header/>
-            <AboutCharacter data={characters}/>
+            <AboutCharacter data={character}/>
             <SectionCharacters data={characters}/>
             <Footer/>
         </>
