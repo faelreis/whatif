@@ -11,7 +11,6 @@ export function AboutCharacter({ data }){
     
     const characterCurrent = data.find((character)=>{
         return character.data.slug == pathname && character;
-        
     });
     console.log(characterCurrent)
     return(
